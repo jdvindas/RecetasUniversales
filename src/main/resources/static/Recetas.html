@@ -4,11 +4,57 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Receta</title>        
+
+        <script src="/js/libro_de_recetas.js"></script>        
+        <script src="/js/ver_recetas.js"></script>
+
+        <title>Receta</title>
+        
+        <!-- Estilos -->
+        <style>
+            button {
+                background-color: #389C9A;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 12px;
+            }
+            
+            button:hover{
+                background-color: #2C7D7C;
+            }
+            
+            .contenedor-receta {
+                background-color: #FEDB71;
+                border-radius: 20px;
+                padding: 10px;
+                display: inline-block;
+                text-align: center;
+                max-width: 90%;
+                margin: auto;
+            }
+            
+            .contenedor-receta .imagen-fondo {
+                background-color: #f0f0f0;
+                border-radius: 15px;
+                padding: 10px;
+                display: inline-block;
+                overflow: hidden;
+            }
+            
+            .contenedor-receta .imagen-fondo img {
+                border-radius: 10px;
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
     </head>
     <body>
         <!-- Encabezado -->
-        <table width="100%" border="1">
+        <table width="100%" border="0">
             <tr>
                 <td><strong>RECETAS <font color="#EAA52C">UNIVERSALES</font></strong></td>
                 <td align="center">
@@ -25,30 +71,16 @@
         </table>
         
         <!-- Detalle de la receta -->
-        <table width="100%" border="1">
-            <tr>
-                <!-- Ingredientes -->
-                <td width ="60%">
-                    <h2>Nombre Receta</h2>
-                    <p><em>Ingredientes</em> <span style="float:right;"><em>Duración: 10 min</em></span></p>
-                    <ul>
-                        <li><em>Ingrediente 1</em></li>
-                        <li><em>Ingrediente 2</em></li>
-                        <li><em>Ingrediente 3</em></li>
-                        <li><em>Ingrediente 4</em></li>
-                        <li><em>Ingrediente 5</em></li>
-                    </ul>
+        <table width="100%" border="0">
+            <tr id="recipeDetails">
+                <td>
+                    <div class="contenedor-receta"></div>
                 </td>
-                
-                <!-- Imagen de Receta -->
-                <td width ="40%" align="center">
-                    <img src="recetax.jpg" alt="Receta X" width="200">
-                </td>                
             </tr>
         </table>
         
         <!-- Botones de accion -->
-        <table width="100%" border="1">
+        <table width="40%" border="0">
             <tr align="center">
                 <td><button>Preparación</button></td>
                 <td><button>Nutrición</button></td>

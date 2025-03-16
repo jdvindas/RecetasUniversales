@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Recetas Universales</title>        
+        <title>Lista de Recetas</title>        
     </head>
     <body>
         <!-- Encabezado -->
-        <table width="100%" border="1">
+        <table width="100%" border="0">
             <tr>
                 <td><strong>RECETAS <font color="#EAA52C">UNIVERSALES</font></strong></td>
                 <td align="center">
@@ -27,22 +27,26 @@
         <main>
             <h2>Nombre de la Receta</h2>
             <h3>Ingredientes</h3>
-            <table>
+            <table width="100%" border="0">
                 <tr>
-                    <th>Ingredientes</th>
-                    <th>Cantidad</th>
+                    <th></th>
+                    <th align="left">Ingredientes</th>
+                    <th align="right">Cantidad</th>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <td align="center"><input type="checkbox"></td>
+                    <td>Ingrediente 1</td>
+                    <td align="right">1 taza</td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <td align="center"><input type="checkbox"></td>
+                    <td>Ingrediente 2</td>
+                    <td align="right">200 gr</td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <td align="center"><input type="checkbox"></td>
+                    <td>Ingrediente 3</td>
+                    <td align="right">1/2 cucharadita</td>
                 </tr>
                 <tr>
                     <th></th>
@@ -73,7 +77,9 @@
                     <th></th>
                 </tr>
             </table>
-            <button>Imprimir</button>
+            <div align="center">
+                <button>Imprimir</button>
+            </div>
         </main>
     </body>
 </html>

@@ -3,11 +3,42 @@
     <head>
         <title>Recetas Universales</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .banner-container {
+            position: relative;
+            width: 65%;
+            margin: 0 auto; /* Centrar el contenedor */
+            }
+            .banner-image {
+                width: 100%;
+                height: 500px;
+                display: block;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+            .banner-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: white; /* O el color que prefieras */
+                background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejor legibilidad */
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .recipe-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body>
         <!-- Encabezado -->
-        <table width="100%" border="1">
+        <table width="100%" border="0">
             <tr>
                 <td><strong>RECETAS <font color="#EAA52C">UNIVERSALES</font></strong></td>
                 <td align="center">
@@ -24,36 +55,40 @@
         </table>
         
         <!-- Banner -->
-        <table width="100%" border="1">
-            <tr>
-                <td>
-                    <img src="pancakes.jpg" alt="Pancakes" width ="100%">
-                </td>
-                <td align="center">
-                    <h2>Título de receta</h2>
-                    <p>Descripción de la receta</p>
-                </td>
-            </tr>
-        </table>
+        <div class="banner-container">
+            <img src="img/pancakes.jpg" class="banner-image"/>
+            <div class="banner-text">
+                <h2>Título de receta</h2>
+                <p>Descripción de la receta</p>
+            </div>
+        </div>
         
         <!-- Lista de Recetas -->
-        <table width="100%" border="1">
+        <table width="100%" border="0">
             <tr align="center">
-                <td><img src="receta1.jpg" alt="Receta 1" width="100"></td>
-                <td><img src="receta2.jpg" alt="Receta 2" width="100"></td>
-                <td><img src="receta3.jpg" alt="Receta 3" width="100"></td>
-                <td><img src="receta4.jpg" alt="Receta 4" width="100"></td>
-                <td><img src="receta5.jpg" alt="Receta 5" width="100"></td>
+                <td onclick="verReceta(1)"><img src="img/receta1.jpg" alt="Receta 1" class="recipe-image" data-recipe="1"></td>
+                <td onclick="verReceta(2)"><img src="img/receta2.jpg" alt="Receta 2" class="recipe-image" data-recipe="2"></td>
+                <td onclick="verReceta(3)"><img src="img/receta3.jpg" alt="Receta 3" class="recipe-image" data-recipe="3"></td>
+                <td onclick="verReceta(4)"><img src="img/receta4.jpg" alt="Receta 4" class="recipe-image" data-recipe="4"></td>
+                <td onclick="verReceta(5)"><img src="img/receta5.jpg" alt="Receta 5" class="recipe-image" data-recipe="5"></td>
             </tr>
         </table>
         
         <!-- Pie de página -->
-        <table width="100%" border="1">
+        <table width="100%" border="0">
             <tr>
                 <td align="center">Recetas Semanales</td>
                 <td align="center"><input type="email" placeholder="Email..."></td>
                 <td align="center"><a href="#"> Subir Receta ⬆ </a></td> <!-- Agregar la flecha hacia arriba -->
             </tr>
         </table>
+        
+        <script>
+            
+            function verReceta(numReceta) {
+                window.open("/Recetas.html?receta="+numReceta, "_self");
+            }
+            
+        </script>
     </body>
 </html>
